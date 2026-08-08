@@ -13,6 +13,8 @@
 - [x] 9. Create Power BI setup & DAX documentation
 - [x] 10. Create README.md with project overview & usage
 - [x] 11. Run the analysis pipeline to verify output
+- [x] 12. Add `src/generate_synthetic_data.py` for scalable synthetic dataset (100k rows)
+- [x] 13. Update `.gitignore` for generated outputs
 
 ## Audit Checks Implemented
 
@@ -20,3 +22,17 @@
 - [x] Missing invoice numbers detection
 - [x] Out-of-hours transactions detection
 - [x] Payments exceeding approval limits detection
+
+## Verification Results (sample dataset, 30 rows)
+
+- Duplicate payments: 8
+- Missing invoice numbers: 3
+- Out-of-hours transactions: 9
+- Exceeds approval limits: 14
+
+## Verification Results (synthetic dataset, 100,750 rows)
+
+- Duplicate payments: 1,444
+- Missing invoice numbers: 2,987
+- Out-of-hours transactions: 750
+- Exceeds approval limits: 16,870

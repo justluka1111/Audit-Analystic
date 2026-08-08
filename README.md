@@ -44,7 +44,8 @@ Audit Analystic/
 │   ├── data_cleaning.py              # Pandas cleaning & transformation
 │   ├── audit_checks.py               # Four analytical checks engine
 │   ├── exception_report.py           # Master register + summary exporters
-│   └── run_analysis.py               # Main orchestrator pipeline
+│   ├── run_analysis.py               # Main orchestrator pipeline
+│   └── generate_synthetic_data.py    # Optional: generate large synthetic dataset
 ├── output/                           # Generated after running the pipeline
 │   ├── exceptions_master.csv
 │   ├── summary_by_type.csv

@@ -14,6 +14,7 @@ Runs the full ETL + audit-check flow:
 
 from __future__ import annotations
 
+import argparse
 import sys
 from pathlib import Path
 
@@ -45,15 +46,22 @@ from exception_report import (  # noqa: E402
 
 
 def main() -> None:
+    parser = argparse.ArgumentParser(description="Run the audit analytics pipeline.")
+    parser.add_argument("--input", type=str, default=None,
+                        help="Path to transaction CSV. Defaults to data/raw_transactions.csv")
+    parser.add_argument("--out", type=str, default=None,
+                        help="Output directory. Defaults to output/")
+    args = parser.parse_args()
+
     data_dir = PROJECT_ROOT / "data"
-    output_dir = PROJECT_ROOT / "output"
+    output_dir = Path(args.out) if args.out else PROJECT_ROOT / "output"
 
     print("=" * 60)
     print("AUDIT ANALYTICS DASHBOARD - ANALYSIS PIPELINE")
     print("=" * 60)
 
     # 1. Load + clean
-    raw_path = data_dir / "raw_transactions.csv"
+    raw_path = Path(args.input) if args.input else data_dir / "raw_transactions.csv"
     print(f"\n[1/5] Loading & cleaning transactions: {raw_path.name}")
     transactions = clean_transactions(raw_path)
     print(f"      Loaded {len(transactions)} transactions")

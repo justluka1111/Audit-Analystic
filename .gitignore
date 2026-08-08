@@ -7,6 +7,8 @@ venv/
 
 # Generated outputs
 output/
+output_synthetic/
+data/synthetic_transactions.csv
 
 # IDE
 .vscode/
