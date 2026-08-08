@@ -1,0 +1,11 @@
+vendor_id,vendor_name,currency,approval_limit
+V001,Acme Supplies Ltd,GBP,5000
+V002,Globex Corporation,GBP,10000
+V003,Initech Solutions,GBP,7500
+V004,Umbrella Services,GBP,2500
+V005,Hooli Enterprises,GBP,15000
+V006,Stark Industries,GBP,20000
+V007,Wayne Enterprises,GBP,12000
+V008,Cyberdyne Systems,GBP,8000
+V009,Tyrell Corporation,GBP,6000
+V010,Skynet Logistics,GBP,3000
